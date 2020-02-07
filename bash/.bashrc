@@ -128,8 +128,8 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # load bash aliases for work
-if [[ -f ~/.bash_aliases_work && -f ~/.work ]]; then
-  . ~/.bash_aliases_work
+if [[ -f ~/.bash_aliases_work_int && -f ~/.work ]]; then
+  . ~/.bash_aliases_work_int
 fi
 
 # fzf fuzzy finder
