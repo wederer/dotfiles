@@ -1,5 +1,7 @@
 # Dotfiles Wolfgang Ederer
 
+ssh and work specific dotfiles are saved in private repos and linked as submodules
+
 Steps to install dotfiles:
 1. Clone this repo to ~/.dotfiles
 2. cd into ~/.dotfiles
