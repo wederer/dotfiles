@@ -6,8 +6,8 @@ Steps to install dotfiles:
 3. run stow <folder> to symlink dotfiles
 
 References:
-https://alexpearce.me/2016/02/managing-dotfiles-with-stow/
-https://www.youtube.com/watch?v=zhdO46oqeRw
+- https://alexpearce.me/2016/02/managing-dotfiles-with-stow/
+- https://www.youtube.com/watch?v=zhdO46oqeRw
 
 ### ToDos
 
