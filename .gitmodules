@@ -4,3 +4,6 @@
 [submodule "ssh"]
 	path = ssh
 	url = https://github.com/wederer/private_dotfiles
+[submodule "not-stowable/keyboardLayoutWindows"]
+	path = not-stowable/keyboardLayoutWindows
+	url = https://github.com/wederer/developer-keyboard-layout-windows
