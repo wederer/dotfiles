@@ -1,0 +1,1 @@
+ACTION=="change", SUBSYSTEM=="drm", HOTPLUG=="1", RUN+="/home/wolfe/.i3/hotplug_monitor.sh"

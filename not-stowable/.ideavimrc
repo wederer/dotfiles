@@ -1,0 +1,38 @@
+set surround
+set ignorecase smartcase
+set relativenumber number
+
+" Indent the current line
+noremap <Space>i v=
+
+" Format everything and jump to same position (does not save scroll position)
+"noremap <Space>I maggvG=`azz
+noremap <Space>I :action ReformatCode<CR>
+
+" Moving blocks of text in visual mode
+vnoremap < <gv'.
+vnoremap > >gv'.
+
+" IDE Actions
+" nnoremap / :action Find<CR>
+" nnoremap n :action FindNext<CR>
+" nnoremap N :action FindPrevious<CR>
+nnoremap U :action $Redo<CR>
+nnoremap ; :action AceJumpAction<CR>
+nnoremap <Space>o :action GotoClass<CR>
+nnoremap <Space>f :action GotoFile<CR>
+nnoremap <Space>u :action FindUsages<CR>
+nnoremap <Space>ag :action FindInPath<CR>
+vnoremap <Space>ag :action FindInPath<CR>
+nnoremap <Space>j :action RecentFiles<CR>
+nnoremap <Space>q :action QuickJavaDoc<CR>
+nnoremap <Space>d :action GotoDeclaration<CR>
+
+" Reload .ideavimrc
+nnoremap <Space>vs :source ~/.ideavimrc<CR>
+
+nnoremap <Tab> :action NextTab<CR>
+nnoremap <S-Tab> :action PreviousTab<CR>
+
+" better join lines -> https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
+set ideajoin

@@ -1,0 +1,6 @@
+[submodule "work_specific_int"]
+	path = work_specific_int
+	url = https://github.com/wederer/work_specific_int
+[submodule "ssh"]
+	path = ssh
+	url = https://github.com/wederer/private_dotfiles
