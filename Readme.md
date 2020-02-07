@@ -13,15 +13,5 @@ https://www.youtube.com/watch?v=zhdO46oqeRw
 
 - [ ] check which files are no longer needed (especially not-stowable)
 - [ ] put keyboard layout in extra repo with good readme (this is not stowable anyway)
-- [ ] Check if all work related info + secrets (e.g. ssh config) are removed
+- [x] Check if all work related info + secrets (e.g. ssh config) are removed
 
-
-### Git
-`~/.gitconfig` includes `~/.gitconfig_local` to allow for differing email address + name.
-
-Add this to `~/.gitconfig_local`:
-```
-[user]
-	name = wederer
-	email = wolfgangederer@gmail.com
-```
