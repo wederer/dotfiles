@@ -9,6 +9,8 @@
 
 # set keyboad + mouse
 (sleep 1s && setxkbmap -option caps:swapescape) &
+
+# t450s specific settings
 # slower mouse movement on trackpoint
 (sleep 1s && xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -0.8) &
 # fix acel/decel issue on trackpoint
