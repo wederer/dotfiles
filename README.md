@@ -1,6 +1,8 @@
 # Dotfiles Wolfgang Ederer
 
-ssh and work specific dotfiles are saved in private repos and linked as submodules
+This repo holds all my dotfiles. Things I do not want to share reside in private repositories which are linked as submodules.
+
+Gnu Stow is used to make linking the dotfiles a breeze.
 
 Steps to install dotfiles:
 1. Clone this repo to ~/.dotfiles
@@ -10,10 +12,3 @@ Steps to install dotfiles:
 References:
 - https://alexpearce.me/2016/02/managing-dotfiles-with-stow/
 - https://www.youtube.com/watch?v=zhdO46oqeRw
-
-### ToDos
-
-- [ ] check which files are no longer needed (especially not-stowable)
-- [ ] put keyboard layout in extra repo with good readme (this is not stowable anyway)
-- [x] Check if all work related info + secrets (e.g. ssh config) are removed
-
