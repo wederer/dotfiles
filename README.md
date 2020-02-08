@@ -1,4 +1,4 @@
-# Dotfiles Wolfgang Ederer
+# My Dotfiles
 
 This repo holds all my dotfiles. Things I do not want to share reside in private repositories which are linked as submodules.
 
