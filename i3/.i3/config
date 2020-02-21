@@ -138,17 +138,13 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #Lock
-exec xautolock -detectsleep -time 3 -locker "$HOME/.i3/custom_suspend.sh" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
-bindsym Mod4+p exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-#bindsym Mod4+a exec notify-send --icon=gtk-info 'xautolock aus' && xautolock -exit
-#bindsym Mod4+e exec notify-send --icon=gtk-info "xautolock an" && xautolock -detectsleep -time 3 -locker "/home/wolfe/.i3/custom_suspend.sh" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+exec xautolock -detectsleep -time 3 -locker "$HOME/.i3/custom_lock.sh && xset dpms force off" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+bindsym Mod4+r exec notify-send --icon=gtk-info 'xautolock aus' && xautolock -exit
+bindsym Mod4+a exec notify-send --icon=gtk-info "xautolock an" && xautolock -detectsleep -time 3 -locker "/home/wolfe/.i3/custom_lock.sh && xset dpms force off" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
 
 #Suspend
-#bindsym Mod4+m exec "sleep 0.5 && xset dpms force off"
-#bindsym Mod4+l exec "sleep 0.5 && ~/.i3/custom_lock.sh && sleep 0.5 && xset dpms force off"
-bindsym Mod4+l exec "scrot /tmp/i3lock.png && sleep 0.1 && xset dpms force off && ~/.i3/custom_lock.sh"
-# bindsym Mod4+h exec "sleep 0.5 && ~/.i3/custom_lock.sh && systemctl hibernate"
-bindsym Mod4+s exec "scrot /tmp/i3lock.png && sleep 0.1 && ~/.i3/custom_lock.sh && systemctl suspend"
+bindsym Mod4+l exec "~/.i3/custom_lock.sh && xset dpms force off"
+bindsym Mod4+s exec "~/.i3/custom_lock.sh && systemctl suspend"
 bindsym Mod4+d exec "i3-nagbar -t warning -m 'Shutdown?' -b 'Yes!' 'systemctl poweroff'"
 bindsym Mod4+e exec "nautilus"
 

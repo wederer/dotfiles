@@ -12,7 +12,7 @@
 
 # doing this in i3 config
 IMAGE=/tmp/i3lock.png
-#SCREENSHOT="scrot $IMAGE" # 0.46s
+SCREENSHOT="scrot $IMAGE" # 0.46s
 
 # Alternate screenshot method with imagemagick. NOTE: it is much slower
 # SCREENSHOT="import -window root $IMAGE" # 1.35s
@@ -29,7 +29,7 @@ IMAGE=/tmp/i3lock.png
 
 # Get the screenshot, add the blur and lock the screen with it
 $SCREENSHOT
-convert -scale 10% -scale 1000% $IMAGE $IMAGE
+convert -scale 4% -scale 2500% $IMAGE $IMAGE
 #convert $IMAGE -blur $BLURTYPE $IMAGE
 i3lock -i $IMAGE
 rm $IMAGE
