@@ -61,5 +61,7 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 # https://superuser.com/questions/187639/zsh-not-hitting-profile
-emulate sh -c '. ~/.profile'
+# this probably needs to be loaded in the WSL, but not on Ubuntu, because ubuntu starts a x session
+# and wsl does not (x session => .profile is loaded)
+#emulate sh -c '. ~/.profile'
 

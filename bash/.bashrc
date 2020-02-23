@@ -134,4 +134,3 @@ fi
 
 # fzf fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-

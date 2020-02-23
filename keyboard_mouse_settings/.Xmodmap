@@ -1,7 +1,4 @@
-clear Lock
-keycode   9 = Caps_Lock NoSymbol Caps_Lock
 keycode  25 = w W w W slash slash slash
-keycode  37 = Control_L NoSymbol Control_L
 keycode  38 = a A a A parenleft parenleft parenleft
 keycode  39 = s S s S parenright parenright parenright
 keycode  40 = d D d D braceleft braceleft braceleft
@@ -10,4 +7,3 @@ keycode  52 = y Y y Y bracketleft bracketleft bracketleft
 keycode  53 = x X x X bracketright bracketright bracketright
 keycode  54 = c C c C apostrophe apostrophe apostrophe
 keycode  55 = v V v V grave grave grave
-keycode  66 = Escape NoSymbol Escape

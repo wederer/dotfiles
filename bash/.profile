@@ -38,3 +38,4 @@ export PATH=~/projects/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
 xmodmap ~/.Xmodmap
+setxkbmap -option caps:swapescape
