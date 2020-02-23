@@ -96,7 +96,7 @@ splitfile(){
 # Converts image and resizes while keeping aspect ratio
 # convert *.jpg -quality 75% -resize "1140x1140" -set filename:mysize '%t_%w' 'converted/%[filename:mysize].jpg'
 # 	usage: convertImage "80%" "1140x1140" *.jpg
-convertImage(){
+convertImage() {
   unset -v arr
   unset -v count
   arr=("$@")
@@ -124,6 +124,17 @@ convertImage(){
       convert $a -quality ${quality:-$defaultQuality} -resize ${dimensions:-$defaultDimensions} -set filename:myname '%t' '%[filename:myname].jpg'
       jpegoptim --strip-all $a
   done
+}
+
+# trim noisy scans - http://www.imagemagick.org/Usage/crop/#trim_noisy
+trim_noisy(){
+	unset -v arr
+	arr=("$@")
+	for a in ${arr}; do
+		convert $a -crop `convert $a -virtual-pixel edge -gravity North -shave 0x50 -shave 20x20 -blur 0x15 -fuzz 30% -trim -format '%wx%h%O' info:` \
+			+repage -gravity NorthEast -shave 10x10 -gravity Center -shave 10x10 $a
+		echo "trimmed $a"
+	done
 }
 
 alias swapcaps="setxkbmap -option caps:swapescape"
