@@ -8,9 +8,9 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-# load bash aliases for work - ~/.work file enables/disables these aliases
-if [[ -f ~/.bash_aliases_work && -f ~/.work ]]; then
-  . ~/.bash_aliases_work
+# load bash aliases for work
+if [[ -f ~/.bash_aliases_work_int && -f ~/.work ]]; then
+  . ~/.bash_aliases_work_int
 fi
 
 # load fzf
