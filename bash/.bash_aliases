@@ -194,6 +194,7 @@ alias glln="git --no-pager log --graph --branches --remotes --pretty=format:'%Cr
 
 # Submodule (S)
 alias gSf='git submodule foreach'
+alias gSu='git submodule update'
 
 # Working Copy (w)
 alias gs='git status'
