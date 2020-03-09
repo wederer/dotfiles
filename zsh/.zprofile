@@ -63,5 +63,8 @@ fi
 # https://superuser.com/questions/187639/zsh-not-hitting-profile
 # this probably needs to be loaded in the WSL, but not on Ubuntu, because ubuntu starts a x session
 # and wsl does not (x session => .profile is loaded)
-#emulate sh -c '. ~/.profile'
+result=$( uname -r | grep "Microsoft" )
+if [ -n "$result" ]; then
+	export DOCKER_HOST=tcp://localhost:2375
+fi
 
