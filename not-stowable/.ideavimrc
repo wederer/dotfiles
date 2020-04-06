@@ -1,4 +1,6 @@
 set surround
+set multiple-cursors
+set commentary
 set ignorecase smartcase
 set relativenumber number
 
@@ -24,6 +26,8 @@ nnoremap <Space>f :action GotoFile<CR>
 nnoremap <Space>u :action FindUsages<CR>
 nnoremap <Space>ag :action FindInPath<CR>
 vnoremap <Space>ag :action FindInPath<CR>
+nnoremap <Space>as :action GotoSymbol<CR>
+vnoremap <Space>as :action GotoSymbol<CR>
 nnoremap <Space>j :action RecentFiles<CR>
 nnoremap <Space>q :action QuickJavaDoc<CR>
 nnoremap <Space>d :action GotoDeclaration<CR>
@@ -34,5 +38,4 @@ nnoremap <Space>vs :source ~/.ideavimrc<CR>
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
 
-" better join lines -> https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
 set ideajoin
