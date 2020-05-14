@@ -59,8 +59,13 @@ multi(){
   #$2 right
   xrandr --output ${1} --auto --output ${2} --auto --right-of ${1}
 }
-alias inton="xrandr --output eDP-1 --auto"
-alias intoff="xrandr --output eDP-1 --off"
+
+alias fixkeys="setxkbmap -option caps:swapescape && xmodmap ~/.Xmodmap"
+alias multion="xrandr --output eDP1 --auto --output DP2-1 --auto --left-of eDP1 && fixkeys"
+alias inton="xrandr --output eDP1 --auto"
+alias intoff="xrandr --output eDP1 --off"
+alias exton="xrandr --output DP2-1 --auto && fixkeys"
+alias extoff="xrandr --output DP2-1 --off"
 
 # diskspace / folder space
 alias space="du -hs * | sort -hr"
