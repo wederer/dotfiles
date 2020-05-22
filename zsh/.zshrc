@@ -19,6 +19,7 @@ fi
 # in WSL $SHELL is not being set correctly
 if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
 	export SHELL=/usr/bin/zsh
+	. ~/.profile
 fi
 
 # load nvm/node/npm/npx only when needed for the first time => speeds up zsh startup
@@ -46,3 +47,4 @@ npx() {
   lazynvm
   npx $@
 }
+
