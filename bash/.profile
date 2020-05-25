@@ -37,5 +37,12 @@ export GOPATH=~/projects/go
 export PATH=~/projects/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
-xmodmap ~/.Xmodmap
-setxkbmap -option caps:swapescape
+# only run if xmodmap is installed (not on wsl)
+if hash xmodmap 2>/dev/null; then
+	xmodmap ~/.Xmodmap
+fi
+
+# only run if setxkbmap is installed (not on wsl)
+if hash setxkbmap 2>/dev/null; then
+	setxkbmap -option caps:swapescape
+fi
