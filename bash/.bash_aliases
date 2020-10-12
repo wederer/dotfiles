@@ -146,6 +146,30 @@ dkrclean() {
     docker volume rm $(docker volume ls -f dangling=true -q)
 }
 
+# start new postgres container that auto restarts
+# e.g. dkrpostgres 5435 newpostgres
+dkrpostgres() {
+	if [ -z "$1" ]
+	then
+		echo "No port provided as first parameter. Publishing with 5432..."
+		1=5432
+	else
+		echo "Starting new postgres container on port $1..."
+	fi
+
+	if [ -z "$2" ]
+	then
+		echo "No name provided as second parameter. Publishing without name..."
+		docker run -d --restart always -e POSTGRES_PASSWORD=postgres --env --interactive --publish $1:5432 postgres
+	else
+		echo "Starting new postgres container with name $2..."
+		docker run -d --restart always -e POSTGRES_PASSWORD=postgres --env --interactive --publish $1:5432 //name $2 postgres
+	fi
+
+	# full command for reference
+	# docker run -d --restart always -e POSTGRES_PASSWORD=postgres --env --interactive --publish 5432:5432 --name db-audience-postgres -v 'dbdata-audience-postgres:/var/lib/postgresql/data' postgres
+}
+
 # ssh agent
 alias ssha="eval `ssh-agent -s`"
 alias gadd="ssh-add ~/.ssh/github_rsa"
