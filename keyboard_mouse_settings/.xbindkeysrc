@@ -10,5 +10,5 @@
     XF86MonBrightnessDown
 "xbacklight -inc 3"
     XF86MonBrightnessUp
-"scrot -e 'mv $f ~/Pictures/screenshots/'"
+"xfce4-screenshooter -r -s ~/Pictures/screenshots"
     Print
