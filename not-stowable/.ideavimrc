@@ -1,5 +1,6 @@
 set surround
 set multiple-cursors
+set highlightedyank
 set commentary
 set ignorecase smartcase
 set relativenumber number
